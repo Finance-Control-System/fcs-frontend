@@ -1,0 +1,16 @@
+getTransactionItemsRequest {
+	startDateTime: Date; (can be string)
+	endDateTime: Date; (can be string)
+}
+
+getTransactionItemsResponse {
+	items: TransactionItem[];
+}
+
+TransactionItem {
+	categoryId: number;
+	amount: number;
+	description: string | null;
+	date: string; (or can make Date)
+	isExpense: boolean;
+}
